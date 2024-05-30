@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqdst88rhcaev"]
+
+[ext_resource type="Script" path="res://CanvasLayer.gd" id="1_q6dwx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xuf47"]
+font_size = 40
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_q6dwx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.262745, 0.262745, 0.262745, 1)
+
+[node name="progress_count" type="Label" parent="."]
+offset_left = 432.0
+offset_top = 185.0
+offset_right = 826.0
+offset_bottom = 266.0
+label_settings = SubResource("LabelSettings_xuf47")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 464.0
+offset_top = 409.0
+offset_right = 671.0
+offset_bottom = 528.0
+text = "Ready"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 65.0
+offset_right = 72.0
+offset_bottom = 88.0
+text = "WASD - move
+mouse scroll - zooming"

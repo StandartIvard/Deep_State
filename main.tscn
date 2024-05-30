@@ -1,0 +1,111 @@
+[gd_scene load_steps=13 format=3 uid="uid://nmduoora17qo"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_uhlyn"]
+[ext_resource type="Texture2D" uid="uid://dbv4x8ln8uvtp" path="res://pngs/iran.png" id="1_uqhr0"]
+[ext_resource type="Texture2D" uid="uid://bxn3wvu727gkx" path="res://pngs/irak.png" id="2_7457x"]
+[ext_resource type="LabelSettings" uid="uid://fokxw4fha6mn" path="res://labels/country_name_vietnam.tres" id="3_qb1wg"]
+[ext_resource type="Script" path="res://CameraSc.gd" id="4_12k0x"]
+[ext_resource type="Texture2D" uid="uid://b4yxh85votg3t" path="res://pngs/syria.png" id="4_575yv"]
+[ext_resource type="Texture2D" uid="uid://p8snaxuu4wyo" path="res://pngs/jordan.png" id="5_86hsg"]
+[ext_resource type="Texture2D" uid="uid://cbtk88q1bv0c8" path="res://pngs/israel.png" id="6_oijpi"]
+[ext_resource type="Texture2D" uid="uid://b3fxeybhtas3v" path="res://pngs/lebanon.png" id="7_00263"]
+[ext_resource type="Texture2D" uid="uid://i8tcofxthfq5" path="res://pngs/egypt.png" id="10_htw65"]
+[ext_resource type="PackedScene" uid="uid://dx75bn3xfm54e" path="res://interface.tscn" id="11_xatnt"]
+[ext_resource type="AudioStream" uid="uid://b0gj3oyns5gq5" path="res://audio/Strategic Serenity.mp3" id="12_7jsq5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_uhlyn")
+
+[node name="map" type="Node2D" parent="."]
+
+[node name="Iran" type="Sprite2D" parent="map"]
+position = Vector2(823, 327)
+texture = ExtResource("1_uqhr0")
+
+[node name="Label" type="Label" parent="map/Iran"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Iran"
+label_settings = ExtResource("3_qb1wg")
+
+[node name="Irak" type="Sprite2D" parent="map"]
+position = Vector2(489, 300)
+texture = ExtResource("2_7457x")
+
+[node name="Label" type="Label" parent="map/Irak"]
+offset_left = -20.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 24.0
+text = "Iraq"
+label_settings = ExtResource("3_qb1wg")
+
+[node name="Syria" type="Sprite2D" parent="map"]
+position = Vector2(339, 245)
+texture = ExtResource("4_575yv")
+
+[node name="Label" type="Label" parent="map/Syria"]
+offset_left = -32.0
+offset_top = -12.0
+offset_right = 11.0
+offset_bottom = 14.0
+text = "Syria"
+label_settings = ExtResource("3_qb1wg")
+
+[node name="Jordan" type="Sprite2D" parent="map"]
+position = Vector2(274, 374)
+texture = ExtResource("5_86hsg")
+
+[node name="Label" type="Label" parent="map/Jordan"]
+offset_left = -43.0
+offset_right = 15.0
+offset_bottom = 26.0
+text = "Jordan"
+label_settings = ExtResource("3_qb1wg")
+
+[node name="Israel" type="Sprite2D" parent="map"]
+position = Vector2(206, 370)
+texture = ExtResource("6_oijpi")
+
+[node name="Label" type="Label" parent="map/Israel"]
+offset_left = -25.0
+offset_top = -17.0
+offset_right = 23.0
+offset_bottom = 9.0
+text = "Israel"
+label_settings = ExtResource("3_qb1wg")
+
+[node name="Lebanon" type="Sprite2D" parent="map"]
+position = Vector2(234, 281)
+texture = ExtResource("7_00263")
+
+[node name="Label" type="Label" parent="map/Lebanon"]
+offset_left = -42.0
+offset_top = -17.0
+offset_right = 34.0
+offset_bottom = 9.0
+text = "Lebanon
+"
+label_settings = ExtResource("3_qb1wg")
+
+[node name="Egypt" type="Sprite2D" parent="map"]
+position = Vector2(64, 538)
+texture = ExtResource("10_htw65")
+
+[node name="Label" type="Label" parent="map/Egypt"]
+offset_left = -51.0
+offset_top = -14.0
+offset_right = -2.0
+offset_bottom = 12.0
+text = "Egypt"
+label_settings = ExtResource("3_qb1wg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+script = ExtResource("4_12k0x")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("11_xatnt")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_7jsq5")
+volume_db = -37.009

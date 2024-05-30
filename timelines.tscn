@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://1f228yikeyt7"]
+
+[ext_resource type="Script" path="res://timelines.gd" id="1_jjbv2"]
+[ext_resource type="Texture2D" uid="uid://ded02vruhompi" path="res://pngs/time_icon_1.png" id="2_7x5wk"]
+[ext_resource type="Texture2D" uid="uid://cd80fai4r5htn" path="res://pngs/time_icon_2.png" id="3_prffy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bgk58"]
+font_size = 30
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjbv2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.34902, 0.34902, 0.34902, 1)
+
+[node name="time_icon_1" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="First_time" type="Button" parent="time_icon_1"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 227.0
+offset_right = 319.0
+offset_bottom = 435.0
+icon = ExtResource("2_7x5wk")
+
+[node name="Label" type="Label" parent="time_icon_1"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 448.0
+offset_right = 265.0
+offset_bottom = 497.0
+text = "Six-days War
+ (1967-1972)"
+
+[node name="time_icon_2" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Second_time" type="Button" parent="time_icon_2"]
+layout_mode = 0
+offset_left = 637.0
+offset_top = 226.0
+offset_right = 845.0
+offset_bottom = 434.0
+icon = ExtResource("3_prffy")
+
+[node name="Label" type="Label" parent="time_icon_2"]
+layout_mode = 0
+offset_left = 692.0
+offset_top = 444.0
+offset_right = 793.0
+offset_bottom = 493.0
+text = "Vietnam War
+(1955-1975)"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 36.0
+offset_right = 702.0
+offset_bottom = 59.0
+text = "Choose period of time"
+label_settings = SubResource("LabelSettings_bgk58")

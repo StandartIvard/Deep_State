@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu5su6ulfaceq"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_wgdxs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g40fh"]
+font_size = 34
+font_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wgdxs")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 771.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 181.0
+offset_right = 696.0
+offset_bottom = 327.0
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 145.0
+text = "Начать игру"
+label_settings = SubResource("LabelSettings_g40fh")
+horizontal_alignment = 1
+vertical_alignment = 1

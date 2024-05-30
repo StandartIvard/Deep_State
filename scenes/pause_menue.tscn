@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://gvb0vx5s4mv8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="continue" type="Button" parent="."]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 323.0
+offset_right = 809.0
+offset_bottom = 532.0
+text = "Back to my game
+"
+
+[node name="to_menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 54.0
+offset_right = 804.0
+offset_bottom = 263.0
+text = "Main menue"

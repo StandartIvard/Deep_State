@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl48uc7miccb"]
+
+[ext_resource type="Texture2D" uid="uid://bxgmsx6cfq66" path="res://pngs/und_constr.jpeg" id="1_qrbnx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qsx76"]
+font_size = 33
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.305882, 0.305882, 0.305882, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 17.0
+offset_right = 765.0
+offset_bottom = 398.0
+texture = ExtResource("1_qrbnx")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 458.0
+offset_right = 805.0
+offset_bottom = 604.0
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_right = 461.0
+offset_bottom = 144.0
+text = "To main menu"
+label_settings = SubResource("LabelSettings_qsx76")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://jnq756v35h70"]
+
+[ext_resource type="Texture2D" uid="uid://cxgdaaahar55a" path="res://pngs/interface.png" id="1_u6g0q"]
+[ext_resource type="Texture2D" uid="uid://bw24k5fekxolp" path="res://pngs/pause_speed.png" id="2_2n6ht"]
+[ext_resource type="Texture2D" uid="uid://coktwp07ne8i0" path="res://pngs/play_speed.png" id="3_jsxk4"]
+[ext_resource type="Texture2D" uid="uid://dfakvrbt77buh" path="res://pngs/double_speed.png" id="4_5ooo2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jbx4h"]
+font_size = 24
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1, 1.0031)
+texture = ExtResource("1_u6g0q")
+
+[node name="timerLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 928.0
+offset_top = 8.0
+offset_right = 1117.0
+offset_bottom = 41.0
+label_settings = SubResource("LabelSettings_jbx4h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pause_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 922.0
+offset_top = 49.0
+offset_right = 980.0
+offset_bottom = 107.0
+scale = Vector2(1.17193, 1.06015)
+icon = ExtResource("2_2n6ht")
+
+[node name="normal_speed" type="Button" parent="."]
+layout_mode = 0
+offset_left = 997.0
+offset_top = 49.0
+offset_right = 1056.0
+offset_bottom = 110.0
+scale = Vector2(1.06617, 1)
+icon = ExtResource("3_jsxk4")
+
+[node name="double_speed" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1067.0
+offset_top = 49.0
+offset_right = 1127.0
+offset_bottom = 110.0
+icon = ExtResource("4_5ooo2")
